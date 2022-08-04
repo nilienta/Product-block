@@ -41,12 +41,6 @@ const Basket = () => {
 	basketElementBuy.onclick = function() { 
 		window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1s');
 	}
-
-	// const basketElementBuyLink = document.createElement('a');
-	// basketElementBuyLink.classList.add('basket__link');
-	// basketElementBuyLink.href = ('https://yablyk.com/563669-418/');
-
-	// basketElementBuy.append(basketElementBuyLink);
 	
 	basketElementFooter.append(basketElementPrice, basketElementBuy);
 	
