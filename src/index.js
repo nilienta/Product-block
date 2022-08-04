@@ -1,6 +1,7 @@
 import './index.scss'
 import 'normalize.css'
 
+import Modal from './components/modal';
 import Sorting from './components/sorting';
 import ItemsList from './components/items-list';
 import Item from './components/item';
@@ -23,15 +24,28 @@ const mocks = [{
 	"price": 300
 }]
 
-const sorting = Sorting();
-document.body.appendChild(sorting);
+const flexBox = document.createElement('div');
+flexBox.classList.add('flex-box');
+document.body.appendChild(flexBox);
 
-let cart = [];
+const sorting = Sorting();
+flexBox.appendChild(sorting);
+
+const stock = document.createElement('div');
+stock.classList.add('stock');
+const modal = Modal();
+const stockBall = document.createElement('div');
+stockBall.classList.add('stock__ball');
+
+stock.append(modal, stockBall);
+
+flexBox.appendChild(stock);
 
 const itemsList = ItemsList();
-const {CartElement, updateCart} = Cart(cart);
-
 document.body.appendChild(itemsList);
+
+let cart = [];
+const {CartElement, updateCart} = Cart(cart);
 
 const generateItems = () => {
 	mocks.forEach((item)=>{
@@ -45,7 +59,6 @@ const generateItems = () => {
 		itemsList.appendChild(itemElement);
 	})
 }
-
 
 generateItems();
 

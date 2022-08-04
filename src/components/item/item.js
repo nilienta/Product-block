@@ -18,7 +18,6 @@ window.onload = function() {
 };
 
 
-
 const Item = (name, price, onAdd) => {
 	const ItemElement = document.createElement('div');
 	ItemElement.classList = 'item';
@@ -28,7 +27,6 @@ const Item = (name, price, onAdd) => {
 	nameElement.classList = 'item__name';
 
 	const imgElement = document.createElement('img');
-	// imgElement.src = ItemImg;
 	imgElement.classList = 'item__img';
 
 	const priceElement = document.createElement('span');

@@ -3,20 +3,15 @@ import './sorting.scss';
 const Sorting = () => {
 
 	// создание кнопки
-	const sortingElement = document.createElement('div');
+	const sortingElement = document.createElement('button');
+	sortingElement.innerText = 'Oтсортировать по цене';
 	sortingElement.classList = 'sorting';
-
-	const sortingElementBtn = document.createElement('button');
-	sortingElementBtn.innerText = 'Oтсортировать по цене';
-	sortingElementBtn.classList = 'sorting__btn';
-
-	sortingElement.appendChild(sortingElementBtn);
 
 	// флаг для контроля убывающей сортировки или возрастающей
 	var toggle = false;
 	
 	// прослушивание нажатий на кнопку
-	sortingElementBtn.addEventListener('click', function(){
+	sortingElement.addEventListener('click', function(){
 	  var items = document.querySelectorAll('.item');
 	  var parent = document.querySelector('.items-list');
 
@@ -57,15 +52,12 @@ const Sorting = () => {
 			keys.sort(compareNumeric2);
 			toggle = !toggle;
 		}
-		console.log (keys);
-	
+		
 		// переписывание массива ключей
 		keys.map(function(key, indx){
 			parent.insertAdjacentElement('beforeEnd', SortElements[key]['element']);
-			console.log(SortElements[key]['element']);
 			SortElements[key]['index'] = indx;
 		});
-		console.log (keys);
 
 		return toggle;
 	}, toggle);

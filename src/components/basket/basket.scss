@@ -1,0 +1,57 @@
+.basket {
+	font-family: Helvetica, Arial, sans-serif;
+	width: 100%;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__title{
+		font-size: 18px;
+		font-weight: 600;
+	}
+	&__clear {
+		outline: none;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		color: #333;
+		font-size: 15px;
+	}
+	&__main{
+		font-size: 15px;
+		color: #333;
+	}
+	&__list{
+		margin: 30px;	
+		max-height: 330px;
+    	overflow: scroll;	
+		overflow-x: hidden;
+	}
+	&__footer{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__price{
+		font-size: 20px;
+		font-weight: 700;
+	}
+	&__buy {
+		border: none;
+		outline: none;
+		background-color: transparent;
+		cursor: pointer;
+		border-radius: 8px;
+		background-color: #ffd555;;
+		width: 225px;
+		height: 40px;
+		font-weight: 700;
+
+		&:hover{
+			background-color: #f27c36;
+		}
+	}
+}
+
