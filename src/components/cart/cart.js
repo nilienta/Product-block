@@ -17,6 +17,7 @@ const Cart = (cart) => {
 		const ItemCart = document.createElement('div');
 		ItemCart.classList = 'item-cart';
 	
+		//!!!добавить изображение товара
 		const imgItemCart = document.createElement('img');
 		imgItemCart.classList = 'item-cart__img';
 		imgItemCart.src = imgCart;
@@ -63,6 +64,8 @@ const Cart = (cart) => {
 		stockBall.innerText =`0`
 		itemCountElement.innerText = `Товаров в корзине: 0`;
 		priceElement.innerText = `Цена: 0`;
+
+		//!!! как-то обнулить cart с главного js
 	});
 
  	return {CartElement, updateCart};
