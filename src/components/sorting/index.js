@@ -1,3 +1,3 @@
 import Sorting from './sorting';
 
-export default Sorting
+export default Sorting;

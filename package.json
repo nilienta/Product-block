@@ -10,6 +10,11 @@
   "license": "ISC",
   "devDependencies": {
     "css-loader": "^6.7.1",
+    "eslint": "^8.21.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "2.7.1",
     "sass": "^1.54.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
@@ -18,7 +23,7 @@
     "webpack-dev-server": "^4.9.2"
   },
   "dependencies": {
-    "normalize": "^0.3.1",
+    "module-alias": "^2.2.2",
     "normalize.css": "^8.0.1"
   }
 }

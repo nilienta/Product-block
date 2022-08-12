@@ -1,10 +1,10 @@
-import './items-list.scss'
+import './items-list.scss';
 
 const ItemsList = () => {
-	const ItemsListElement = document.createElement('div');
-	ItemsListElement.classList = 'items-list';
-	
-	return ItemsListElement;
-}
+  const ItemsListElement = document.createElement('div');
+  ItemsListElement.classList = 'items-list';
 
-export default ItemsList
+  return ItemsListElement;
+};
+
+export default ItemsList;

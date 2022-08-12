@@ -1,20 +1,20 @@
-.flex-box{
-	margin: 20px auto;
-	display:flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 556px;
+.flex-box {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 556px;
 }
 .stock {
-	position: relative;
-	&__ball{
-		position: absolute;
-		top: 0px;
-		right: -4px;
-		min-width: 18px;
-		padding: 1px;
-		text-align: center;
-		border-radius: 16px;
-		background-color: #ffd555;
-	}
+  position: relative;
+  &__ball {
+    position: absolute;
+    top: 0px;
+    right: -4px;
+    min-width: 18px;
+    padding: 1px;
+    text-align: center;
+    border-radius: 16px;
+    background-color: #ffd555;
+  }
 }

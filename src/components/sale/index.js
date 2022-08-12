@@ -1,3 +1,3 @@
 import Sale from './sale';
 
-export default Sale
+export default Sale;
