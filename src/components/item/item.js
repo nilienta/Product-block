@@ -1,22 +1,6 @@
-import ItemImg1 from '../../assets/img/item1.jpg';
-import ItemImg2 from '../../assets/img/item2.png';
-import ItemImg3 from '../../assets/img/item3.png';
-
 import './item.scss';
 
-window.onload = () => {
-  const ItemImg = [ItemImg1, ItemImg2, ItemImg3];
-  const countImg = document.querySelectorAll('.item__img').length;
-  for (let i = 0; i < countImg; i += 1) {
-    const currentImg = document.querySelectorAll('.item__img')[i];
-    currentImg.src = ItemImg[i];
-  }
-  //   document.querySelectorAll('.item__img').array.map((item, index)=>{
-  //     item.src = ItemImg[index]
-  //   })
-};
-
-const Item = (name, price, onAdd) => {
+const Item = (name, price, img, onAdd) => {
   const ItemElement = document.createElement('div');
   ItemElement.classList = 'item';
 
@@ -25,6 +9,7 @@ const Item = (name, price, onAdd) => {
   nameElement.classList = 'item__name';
 
   const imgElement = document.createElement('img');
+  imgElement.src = img;
   imgElement.classList = 'item__img';
 
   const priceElement = document.createElement('span');

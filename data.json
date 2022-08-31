@@ -1,19 +1,23 @@
 {
-	"notebooks": [
+	"laptops": [
 		{
 			"id": 1,
-			"name": "notebook1",
-			"price": 100
+			"name": "laptop1",
+			"price": 100,
+			"img": "https://upload.wikimedia.org/wikipedia/commons/f/fd/201706_Laptop_open.svg"
 		},
 		{
 			"id": 2,
-			"name": "notebook2",
-			"price": 200
-		}
+			"name": "laptop2",
+			"price": 450,
+			"img": "https://upload.wikimedia.org/wikipedia/commons/5/5e/HP_Laptop_Notebook.png"
+		},
 		{
 			"id": 3,
-			"name": "notebook3",
-			"price": 300
+			"name": "laptop3",
+			"price": 300,
+			"img": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Laptop_W.png"
 		}
 	]
 }
+

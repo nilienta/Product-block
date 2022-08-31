@@ -1,0 +1,15 @@
+.sorting {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  background-color: #ffd555;
+  width: 270px;
+  height: 30px;
+  font-size: 20px;
+
+  &:hover {
+    background-color: #f27c36;
+  }
+}

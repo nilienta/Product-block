@@ -19,6 +19,13 @@
     color: #333;
     font-size: 15px;
   }
+  &__cross {
+    /* Стили для кнопки закрытия */
+    width: 25px;
+    height: 25px;
+    fill: #444;
+    cursor: pointer;
+  }
   &__main {
     font-size: 15px;
     color: #333;
