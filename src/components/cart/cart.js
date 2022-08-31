@@ -1,8 +1,9 @@
 import './cart.scss';
-import imgCart from '../../assets/img/418.png';
 
 const Cart = (cart) => {
   const CartElement = document.createElement('div');
+  CartElement.className = 'cart';
+
   const priceElement = document.querySelector('.basket__price');
   const itemCountElement = document.querySelector('.basket__title');
   const stockBall = document.querySelector('.stock__ball');
@@ -11,16 +12,13 @@ const Cart = (cart) => {
   stockBall.innerText = `${cart.length}`;
   priceElement.innerText = 'Цена: 0';
 
-  CartElement.className = 'cart';
-
   const itemAddCart = (name, price, img) => {
     const ItemCart = document.createElement('div');
     ItemCart.classList = 'item-cart';
 
-    // !!!добавить изображение товара
     const imgItemCart = document.createElement('img');
     imgItemCart.classList = 'item-cart__img';
-    imgItemCart.src = imgCart;
+    imgItemCart.src = img;
 
     const wrapCart = document.createElement('div');
     wrapCart.classList = 'item-cart__wrap';
@@ -53,7 +51,11 @@ const Cart = (cart) => {
 
     // обновление списка товаров в корзине
     for (let i = 0; i < newCart.length; i += 1) {
-      const newitemCart = itemAddCart(newCart[i].name, newCart[i].price);
+      const newitemCart = itemAddCart(
+        newCart[i].name,
+        newCart[i].price,
+        newCart[i].img
+      );
       list.appendChild(newitemCart);
     }
   };

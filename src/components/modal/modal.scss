@@ -36,17 +36,6 @@
     transition: 0.3s all;
   }
 
-  &__cross {
-    /* Стили для кнопки закрытия */
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    fill: #444;
-    cursor: pointer;
-  }
-
   &__overlay {
     /* Скрываем подложку  */
     opacity: 0;

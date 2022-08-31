@@ -3,7 +3,6 @@ import './modal.scss';
 import Basket from '../basket';
 
 import BasketImg from '../../assets/icons/basket.png';
-import Cross from '../../assets/icons/cross.png';
 
 const Modal = () => {
   const modalElement = document.createElement('button');
@@ -20,13 +19,6 @@ const Modal = () => {
   // создание модального окна
   const modalElementDialog = document.createElement('div');
   modalElementDialog.classList.add('modal__dialog');
-
-  const modalElementCross = document.createElement('img');
-  modalElementCross.classList.add('modal__cross');
-  modalElementCross.src = Cross;
-  modalElementCross.alt = 'Закрыть';
-
-  modalElementDialog.appendChild(modalElementCross);
 
   const basket = Basket();
   modalElementDialog.appendChild(basket);
@@ -45,11 +37,6 @@ const Modal = () => {
     event.preventDefault();
     modalElementDialog.classList.add('active');
     modalElementOverlay.classList.add('active');
-  });
-
-  modalElementCross.addEventListener('click', () => {
-    modalElementDialog.classList.remove('active');
-    modalElementOverlay.classList.remove('active');
   });
 
   // закрытие окна при клике на ESC

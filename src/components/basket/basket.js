@@ -1,5 +1,7 @@
 import './basket.scss';
 
+import Cross from '../../assets/icons/cross.png';
+
 const Basket = () => {
   const basketElement = document.createElement('div');
   basketElement.classList.add('basket');
@@ -14,9 +16,16 @@ const Basket = () => {
   basketElementClear.classList.add('basket__clear');
   basketElementClear.innerText = 'Очистить корзину';
 
-  // !!!!!!!!!!Добавить закрытие по крестику в этот блок
+  const basketElementCross = document.createElement('img');
+  basketElementCross.classList.add('basket__cross');
+  basketElementCross.src = Cross;
+  basketElementCross.alt = 'Закрыть';
 
-  basketElementHeader.append(basketElementTitle, basketElementClear);
+  basketElementHeader.append(
+    basketElementTitle,
+    basketElementClear,
+    basketElementCross
+  );
 
   const basketElementMain = document.createElement('div');
   basketElementMain.classList.add('basket__main');
